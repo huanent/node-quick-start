@@ -11,9 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/koa": "^2.0.46",
-    "koa": "^2.5.2",
-    "koa-router": "^7.4.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "require-all": "^3.0.0"
   },
   "devDependencies": {

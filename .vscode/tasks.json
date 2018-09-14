@@ -7,15 +7,16 @@
       "label": "clear",
       "type": "shell",
       "windows": {
-        "command": "Remove-Item ${workspaceFolder}\\build\\* -recurse "
-      },
-      "group": "build"
+        "command": "if(Test-Path ${workspaceFolder}\\build){Remove-Item ${workspaceFolder}\\build\\* -recurse}"
+      }
     },
     {
       "label": "build",
       "type": "shell",
       "command": "tsc",
-      "dependsOn": ["clear"]
+      "dependsOn": [
+        "clear"
+      ]
     }
   ]
 }
