@@ -5,17 +5,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "ts-node ./src/server.ts"
+    "serve": "tsc -w",
+    "build": "rimraf build && tsc --build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "require-all": "^3.0.0"
   },
   "devDependencies": {
-    "@types/koa-router": "^7.0.31"
+    "@types/koa-router": "^7.0.31",
+    "@types/koa-static": "^4.0.0",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
   }
 }

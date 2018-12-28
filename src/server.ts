@@ -1,7 +1,10 @@
-import app from './app'
-import requireAll from "require-all";
+import Koa from "koa";
+import router from "./router";
+import staticFile from "koa-static";
+const app = new Koa();
 
-requireAll(__dirname + "/controllers");
-
+app.use(router.routes());
+app.use(router.allowedMethods());
+app.use(staticFile("public"));
 console.log("listening on http://localhost:3000");
 app.listen(3000);
