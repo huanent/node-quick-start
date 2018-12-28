@@ -13,13 +13,17 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
+    "mongoose": "^5.4.1",
     "require-all": "^3.0.0"
   },
   "devDependencies": {
+    "@types/koa-bodyparser": "^4.2.1",
     "@types/koa-router": "^7.0.31",
     "@types/koa-static": "^4.0.0",
+    "@types/mongoose": "^5.3.5",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"

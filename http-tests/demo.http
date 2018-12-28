@@ -1,0 +1,24 @@
+GET http://localhost:3000/api/demo HTTP/1.1
+
+####
+
+POST http://localhost:3000/api/demo HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":23,
+    "pwd":"aaa"
+}
+
+####
+
+PUT http://localhost:3000/api/demo/5c25f5dde32aca098428b4e4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":24,
+    "pwd":"a333aa"
+}
+
+###
+DELETE http://localhost:3000/api/demo/5c25f5dde32aca098428b4e4 HTTP/1.1
