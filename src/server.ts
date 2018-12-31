@@ -1,12 +1,20 @@
-import Koa from "koa";
-import router from "./router";
+import { app, router } from "./app";
 import staticFile from "koa-static";
 import bodyParser from "koa-bodyparser";
-const app = new Koa();
+import "./controllers/demoController";
+import "./controllers/demo2Controller";
+
+const port = 3000;
 
 app.use(bodyParser());
+app.use(staticFile("public"));
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.use(staticFile("public"));
-console.log("listening on http://localhost:3000");
-app.listen(3000);
+app.listen(port, () => {
+  console.log(
+    "App is running at http://localhost:%d in %s mode",
+    port,
+    app.env
+  );
+  console.log("Press CTRL-C to stop\n");
+});

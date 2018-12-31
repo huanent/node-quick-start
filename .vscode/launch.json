@@ -10,8 +10,9 @@
       "name": "启动程序",
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/src/server.ts",
+      "restart": true,
       "cwd": "${workspaceFolder}",
-      "outFiles": ["${workspaceFolder}/build/**/*.js"]
+      "outFiles": ["${workspaceFolder}/bin/**/*.js"]
     }
   ]
 }

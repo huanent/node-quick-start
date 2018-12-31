@@ -1,4 +1,4 @@
-import conn from "../dbConection";
+import conn from "../conection";
 import mongoose from "mongoose";
 
 const demoSchema = new mongoose.Schema({
